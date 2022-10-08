@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/register.css">
+    <script src="/js/register.js" defer></script>
+    <title>Create a new Account </title>
+</head>
+
+<body>
+
+    <div class="root" id="root">
+        <div class="container">
+            <header>
+                <img src="/img/logo.png" alt="">
+                <h1>AllNotes</h1>
+                <p>Remember everything important.</p>
+            </header>
+            <form action="/register" method="post" id="form">
+
+                <div class="username">
+                    <input type="text" id="username" name="username" placeholder="Username" autocomplete="off" required>
+                </div>
+
+                <div id="error">
+                    <%=usernameError%>
+                </div>
+
+                <div class="password">
+                    <input type="password" name="password" id="password" maxlength="20" placeholder="Password" required>
+                </div>
+
+                <div id="password-length">
+                    <!-- Select a password between 6 and 20 characters long! -->
+                </div>
+
+                <div class="confirmPassoword password">
+
+                    <input type="password" id="confirmPassoword" maxlength="20" placeholder="Confirm Password" required>
+
+                </div>
+
+                <div id="confirmPassowordError">
+                    <!-- Select a password between 6 and 20 characters long! -->
+                </div>
+
+                <button>Sumbit</button>
+
+                <p>By creating an account, you are agreeing to our <br> Terms of Service and Privacy Policy.</p>
+            </form>
+
+
+
+            <footer>
+                <p>Already have an account?</p>
+                <a href="/login">Sign in</a>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

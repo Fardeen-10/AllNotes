@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/edit.css">
+    <script src="https://kit.fontawesome.com/8b0dcab210.js" crossorigin="anonymous"></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/edit.js" defer></script>
+    <title>All Note</title>
+</head>
+
+<body>
+    <div class="root" id="root">
+
+
+        <%- include('../partials/navbar'); %>
+
+
+            <div class="right">
+
+
+
+                <header>
+                    <span>Edit Note</span>
+
+                    <a href="/all-note/notes">
+                        << <span>Back</span>
+                    </a>
+                </header>
+
+
+
+                <div class="add-note-container">
+
+                    <div class="add-note-box">
+                        <form action="/all-note/notes/<%=note._id%>/edit?_method=PUT" method="post">
+                            <div class="title">
+
+                                <label for="main-title">Title</label>
+                                <input type="text" id="main-title" name="title" placeholder="Title" autocomplete="off"
+                                    value="<%=note.title%>">
+                            </div>
+
+                            <div class="description">
+
+                                <label for="main-description">Description</label>
+                                <textarea name="description" id="main-description"
+                                    placeholder="Description"></textarea></textarea>
+
+                            </div>
+
+
+                            <div class="buttons">
+
+
+                                <button type="submit" id="save"> <i class="fa-solid fa-angles-left"></i>Update</button>
+
+
+
+                            </div>
+                        </form>
+                        <button id="reset"> <i class="fa-solid fa-angles-left"></i> Reset </button>
+
+                    </div>
+
+                    <!-- -------------example note---------------- -->
+
+                    <div class="example-note">
+                        <div class="top">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+
+                        <p id="example-title">Example Notes</p>
+                        <p id="example-description"> Lorem Ipsum is simply dummy text of the printing and typesetting
+                            standard dummy text ever since the 1500s, when</p>
+
+
+                    </div>
+
+                    <!-- -------------example note---------------- -->
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

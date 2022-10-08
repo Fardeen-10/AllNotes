@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+body{
+    transition: linear 0.8s;
+}
+
+html{
+    font-size: 64.5%;
+}
+
+a{
+    text-decoration: none;
+}
+:root{
+    --grey:#a6a6a6;
+    --main:#00A82D;
+    --black:#1A1A1A;
+}
+
+.root{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+
+/* -------------right Side--------------  */
+
+
+.right{
+    width: 84%;
+    overflow-x: scroll;
+    position: relative;
+    background-color: #F2F2F2;
+    font-family: 'Baloo 2', cursive;    
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+
+header{
+    background:#fff;
+    width: 95%;
+    margin-top: 2rem;
+    padding: 16px 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 12px;
+}
+
+header a {
+    border: 1px solid black;
+    padding: 3px 14px;
+    border-radius: 10px;
+}
+
+
+.add-note-container{
+    width: 95%;
+    margin-top: 4rem;
+    border-radius: 16px;
+    display:flex;
+}
+
+.add-note-container .add-note-box{
+    width: 70%;
+    height:450px;
+    background-color: #fff;
+    padding: 17px 19px;
+    position: relative;
+}
+
+.add-note-container .add-note-box .title , 
+.add-note-container .add-note-box .description {
+    display: flex;
+    flex-direction: column;
+
+}
+.add-note-container .add-note-box .title {
+    margin-bottom: 3rem;
+}
+
+.add-note-container .add-note-box .title label , 
+.add-note-container .add-note-box .description label{
+    font-size: 2.4rem;
+}
+
+.add-note-container .add-note-box .title input , 
+.add-note-container .add-note-box .description textarea{
+    padding: 7px 12px;
+    border-radius: 11px;
+    outline: noe;
+    outline: none;
+    border: 1px solid grey;
+    font-size: 1.7rem;
+    background: #F3F6FD;
+}
+
+.add-note-container .add-note-box .description textarea{
+    width: 100%;
+    height: 133px;
+    resize: none;
+}
+
+
+.add-note-container .add-note-box .buttons {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.add-note-container .add-note-box .buttons #reset , 
+.add-note-container .add-note-box .buttons #save ,
+#reset{
+    border: 1px solid black;
+    padding: 6px 13px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ;
+    margin-right: 15px;
+    background-color: #fff;
+}
+
+#save{
+    position: absolute;
+        left: 130px;
+}
+/* #reset{
+    position: absolute;
+} */
+
+.add-note-container .add-note-box .buttons #save{
+    background: var(--main);
+}
+
+.add-note-container .add-note-box .buttons #reset:hover{
+    background-color: var(--main);
+}
+
+
+
+
+
+
+
+/* -------------Example Note---------- */
+    
+.add-note-container .example-note{
+    
+
+    height: 100%;
+    width: 345px;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0 10px;
+    position: relative;
+
+}
+
+.add-note-container .example-note .top{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 3px;
+}
+
+.add-note-container .example-note .top i{
+    font-size:2.3rem;
+}
+
+
+.add-note-container .example-note #example-title{
+    margin-top: 2.2rem;
+    font-size: 2.3rem;
+    overflow: hidden;
+}
+
+
+.add-note-container .example-note #example-description{
+    height: 66%;
+    font-size: 1.6rem;
+    width: 96%;;
+    padding: 9px 3px;
+    position: absolute;
+    top: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+
+

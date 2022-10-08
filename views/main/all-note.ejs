@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <!-- <link rel="stylesheet" href="/css/navbar.css"> -->
+    <link rel="stylesheet" href="/css/all-note.css">
+    <script src="https://kit.fontawesome.com/8b0dcab210.js" crossorigin="anonymous"></script>
+    <script src="/js/all-note.js" defer></script>
+    <title>All Note</title>
+</head>
+
+<body>
+    <div class="root" id="root">
+
+
+        <%- include('../partials/navbar'); %>
+
+
+            <div class="right">
+
+                <header>
+                    <div class="nav">
+                        <div class="greet">
+                            <span>Good morning, <%= user.username %> !</span>
+                        </div>
+                        <div class="date" id="date">
+                        </div>
+                    </div>
+                </header>
+
+
+                <div class="notes-container">
+
+                    <div class="notesBox">
+
+                        <div class="notesBoxNav">
+
+                            <span>NOTES <i class="fa-solid fa-chevron-right"></i></span>
+
+                            <div class="icons">
+                                <a href="/all-note/add-note"> <i class="fa-solid fa-file-lines"></i></a>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="notesSlider">
+
+                            <% for(let note of user.notes) { %>
+
+                                <a href="" class="show-note-box">
+
+                                    <div class="title">
+                                        <%= note.title %>
+                                    </div>
+
+                                    <div class="description">
+                                        <%= note.description %>
+                                    </div>
+
+
+                                    <div class="date">
+                                        <%= note.date %>,
+                                            <%= note.month %>
+                                    </div>
+                                </a>
+
+
+                                <% } %>
+
+
+
+
+                                    <div class="add-note-box">
+                                        <a href="/all-note/add-note">
+                                            <img src="/img/plus.webp" alt="">
+                                            <span>Create new note</span>
+                                        </a>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                    <!-- --------------scratchPad---------------- -->
+                    <div class="scratchPad">
+                        <form action="all-note/scratchPad" method="post">
+
+                            <h1>SCRATCH PAD</h1>
+                            <textarea name="scratchPad" id="scratchPad-area"
+                                placeholder="Starting Writing..."> <%= user.scratchPad %>  </textarea>
+
+                            <button type="submit" id="saveBtn">SAVE</button>
+                            <span id="scratchPadSpan">save when you make change</span>
+                        </form>
+
+
+
+                    </div>
+                    <!-- --------------scratchPad---------------- -->
+
+                </div>
+
+
+
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At culpa aspernatur quos, dolore
+                    dignissimos eaque corporis vitae quibusdam, illum reprehenderit architecto. Magni quam fuga vitae!
+                    Illum, autem aliquid? Officia, commodi?
+                    Officiis consequuntur natus, ipsam aliquid tenetur ab! Architecto et animi quasi numquam? Ut omnis
+                    qui, delectus facere distinctio dolores mollitia voluptatum magnam molestias pariatur quae! Ipsam
+                    suscipit quaerat ipsum itaque.
+                    Perferendis repudiandae quia, quas eligendi itaque vel veniam minus odio laborum, reprehenderit
+                    magnam eius sed molestiae distinctio incidunt deserunt sequi. Distinctio ex perferendis, sapiente
+                    modi dicta veniam a rem enim.
+                    Magnam culpa et quibusdam sunt tempora asperiores totam quia! Laborum, architecto ipsam, vitae, sed
+                    reiciendis dolores eligendi hic illo quos saepe quo id delectus quasi unde consectetur totam neque
+                    vero?
+                    Voluptates autem delectus quae laudantium quos harum ipsam minus, eos nisi. Nisi tempore possimus
+                    quae ipsam. Expedita asperiores, laborum eveniet blanditiis corporis voluptates eaque. Consectetur
+                    doloremque aspernatur inventore ad sit.
+                    Animi, nemo odio quaerat a saepe asperiores perferendis, ipsa ut voluptatem nam ducimus expedita,
+                    dicta quos labore minus. Non ipsa qui culpa suscipit odit nisi minima similique commodi molestiae
+                    iusto!
+                    Earum, nobis! Animi aliquid doloribus modi. Impedit id voluptate possimus et quas vero quibusdam,
+                    soluta, ex alias nam debitis excepturi cumque eligendi. Autem, eius atque Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit. Iste eaque exercitationem perspiciatis quibusdam, eveniet
+                    laudantium quo perferendis odio possimus beatae non illo nemo! Sequi quia inventore quisquam ut nam
+                    sit.
+                    Maiores repellendus, voluptate corporis illum architecto quis suscipit in veritatis molestias sed
+                    consectetur sint officia obcaecati dolore vitae assumenda accusantium? Dolore aperiam ipsa ut quod
+                    fuga obcaecati deleniti cumque ratione.
+                    Ex accusamus sequi iusto perspiciatis cupiditate maiores alias sit vitae, quia blanditiis eos quo
+                    totam adipisci quam magni facere nesciunt, amet neque culpa libero repellat autem impedit numquam
+                    nisi. Harum.
+                    Nemo neque mollitia, harum ducimus natus similique! Soluta eveniet voluptatum laboriosam fugiat
+                    dolor cupiditate ratione, deleniti velit porro, odio recusandae eos explicabo saepe esse asperiores
+                    ad dolorem quasi in officiis.
+                    Qui repellendus id cum voluptatem? Hic inventore tempora placeat amet maiores minus? Rem repudiandae
+                    ipsa quasi hic consequatur delectus quidem voluptas sint autem doloribus, modi voluptatibus
+                    explicabo quae aspernatur fugit?
+                    Quaerat, provident! Temporibus eligendi saepe vel facere ab omnis accusamus, similique, quo dolore
+                    laborum, quibusdam dolorum aspernatur amet molestiae quas dolor maxime minima excepturi doloribus
+                    officiis! Itaque libero consequatur maxime.
+                    amet, consectetur adipisicing elit. Iste eaque exercitationem perspiciatis quibusdam, eveniet
+                    laudantium quo perferendis odio possimus beatae non illo nemo! Sequi quia inventore quisquam ut nam
+                    sit.
+                    Maiores repellendus, voluptate corporis illum architecto quis suscipit in veritatis molestias sed
+                    consectetur sint officia obcaecati dolore vitae assumenda accusantium? Dolore aperiam ipsa ut quod
+                    fuga obcaecati deleniti cumque ratione.
+                    Ex accusamus sequi iusto perspiciatis cupiditate maiores alias sit vitae, quia blanditiis eos quo
+                    totam adipisci quam magni facere nesciunt, amet neque culpa libero repellat autem impedit numquam
+                    nisi. Harum.
+                    Nemo neque mollitia, harum ducimus natus similique! Soluta eveniet voluptatum laboriosam fugiat
+                    dolor cupiditate ratione, deleniti velit porro, odio recusandae eos explicabo saepe esse asperiores
+                    ad dolorem quasi in officiis.
+                    Qui repellendus id cum voluptatem? Hic inventore tempora placeat amet maiores minus? Rem repudiandae
+                    ipsa quasi hic consequatur delectus quidem voluptas sint autem doloribus, modi voluptatibus
+                    explicabo quae aspernatur fugit?
+                    Quaerat, provident! Temporibus eligendi saepe vel facere ab omnis accusamus, similique, quo dolore
+                    laborum, quibusdam dolorum aspernatur amet molestiae quas dolor maxime minima excepturi doloribus
+                    officiis! Itaque libero consequatur maxime.
+                    amet, consectetur adipisicing elit. Iste eaque exercitationem perspiciatis quibusdam, eveniet
+                    laudantium quo perferendis odio possimus beatae non illo nemo! Sequi quia inventore quisquam ut nam
+                    sit.
+                    Maiores repellendus, voluptate corporis illum architecto quis suscipit in veritatis molestias sed
+                    consectetur sint officia obcaecati dolore vitae assumenda accusantium? Dolore aperiam ipsa ut quod
+                    fuga obcaecati deleniti cumque ratione.
+                    Ex accusamus sequi iusto perspiciatis cupiditate maiores alias sit vitae, quia blanditiis eos quo
+                    totam adipisci quam magni facere nesciunt, amet neque culpa libero repellat autem impedit numquam
+                    nisi. Harum.
+                    Nemo neque mollitia, harum ducimus natus similique! Soluta eveniet voluptatum laboriosam fugiat
+                    dolor cupiditate ratione, deleniti velit porro, odio recusandae eos explicabo saepe esse asperiores
+                    ad dolorem quasi in officiis.
+                    Qui repellendus id cum voluptatem? Hic inventore tempora placeat amet maiores minus? Rem repudiandae
+                    ipsa quasi hic consequatur delectus quidem voluptas sint autem doloribus, modi voluptatibus
+                    explicabo quae aspernatur fugit?
+                    Quaerat, provident! Temporibus eligendi saepe vel facere ab omnis accusamus, similique, quo dolore
+                    laborum, quibusdam dolorum aspernatur amet molestiae quas dolor maxime minima excepturi doloribus
+                    officiis! Itaque libero consequatur maxime.
+                    Praesentium iusto laboriosam laborum magni corporis pariatur consequatur mollitia! Explicabo ipsa
+                    nisi iste repellat magnam reiciendis? Ipsam distinctio dicta obcaecati at corrupti aperiam beatae,
+                    deleniti voluptatum maxime, architecto, accusantium autem.
+                    Corporis similique nobis nam eaque ratione quis dignissimos incidunt facilis autem ipsam facere,
+                    laborum possimus consequatur aut at, minus qui quaerat illum? Reiciendis nobis unde magni hic, vel
+                    similique. Natus.
+                    Incidunt deserunt eveniet sit exercitationem earum, placeat aperiam distinctio nulla? Vel,
+                    laboriosam? Fuga inventore perspiciatis molestiae officia voluptate deleniti sapiente, iure esse,
+                    fugit aperiam optio quos molestias nam sint qui!
+                    Qui optio ea, asperiores quod esse incidunt corrupti nisi saepe dolorem eaque voluptatum. Amet
+                    necessitatibus saepe illum aperiam voluptatibus sunt dolorum doloribus optio excepturi vero deserunt
+                    quidem natus, quae pariatur.
+                    Praesentium, voluptates quis vitae aperiam libero assumenda neque qui aspernatur harum dolorum. Nemo
+                    minima ex accusamus ratione! Sapiente accusantium aut earum sed, eveniet temporibus, accusamus
+                    maiores deserunt nobis assumenda fuga.
+                    Ullam aut modi temporibus illum, earum eligendi, quam ipsa quas consectetur cum ad dicta veritatis,
+                    recusandae mollitia at deserunt sit rem distinctio nisi! Dolores deserunt quae cupiditate
+                    repellendus vero velit. tempore omnis nesciunt
+                    incidunt nihil?
+                    Eum quis ducimus deserunt sint architecto ullam consequatur, dolore eos nisi consequuntur expedita
+                    laborum incidunt provident necessitatibus iusto! Natus, autem. Veritatis laudantium enim a sunt
+                    nemo, aliquam repudiandae ipsam consectetur.
+                    Iste sint voluptates sunt velit aut illum, perferendis voluptas minima dolorem amet eaque magnam
+                    inventore reprehenderit quisquam dolorum dolore pariatur modi adipisci fuga provident omnis commodi
+                    enim! Placeat, veniam recusandae?
+                    Eos, at ducimus! Voluptatibus, dolores? Quaerat asperiores deleniti placeat modi quia voluptatum
+                    itaque, suscipit exercitationem neque aspernatur velit. Sequi provident accusantium amet ratione
+                    dolores odit cupiditate autem eligendi perspiciatis distinctio!</span>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

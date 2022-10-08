@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+body{
+    transition: linear 0.8s;
+}
+
+html{
+    font-size: 64.5%;
+}
+
+a{
+    text-decoration: none;
+}
+:root{
+    --grey:#a6a6a6;
+    --main:#00A82D;
+    --black:#1A1A1A;
+}
+
+nav{
+    height:inherit;
+    width: 16%;
+    background-color: var(--black);
+}
+
+nav .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    color: var(--grey);
+    position: relative;
+}
+
+nav .info .id {
+    font-size: 1.7rem;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+nav .info .id span {
+   margin-right: 6px;
+}
+nav .info .setting i{
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+
+#arrow-down{
+    font-size: 1.4rem;
+}
+
+/* -- -------------id DropDrown----------------- -- */
+
+.id-dropDrown{
+    display: none;
+    position: absolute;
+    left: 3px;
+    width: 235px;
+    background-color: #fff;
+    top: 100%;
+    border-radius: 10px;
+    padding-top: 8px;
+    z-index: 100;
+}
+
+.id-dropDrown.active{
+    display: block;
+    /* transition: display 1s ease-in ; */
+}
+
+.id-dropDrown a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 5px 20px;
+    color: black;
+    padding-left: 3.2rem;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.id-dropDrown a:hover{
+    background-color: rgba(128, 128, 128 , 0.2);
+}
+
+
+
+
+
+
+
+/* -- -------------id DropDrown----------------- -- */
+
+
+.search-add{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-add .search , 
+.search-add .new{
+    width: 92%;
+    border-radius: 18px;
+    height: 40px;
+    display: flex;
+    background: #404040;
+    color: #fff;
+    margin-bottom: 1.3rem;
+}
+
+.search-add .new{
+    display: flex;
+    position: relative;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--main);
+    padding: 0px 11px;
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+
+.search-add .new .plus span:first-child{
+    margin-right: 0.9rem;
+}
+
+/* ---------------new DropDown----------------- */
+
+.new-dropDrown{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 227px;
+    background: #fff;  
+    border-radius:12px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.8rem;
+}
+
+.new-dropDrown.active{
+    display: flex;
+}
+
+.new-dropDrown a:first-child ,
+.new-dropDrown a:nth-child(2){
+    display: block;
+    width: 93%;
+    background-color: var(--main);
+    border-radius: 13px;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.new-dropDrown a:nth-child(2){
+    margin-bottom: 0;
+}
+
+.new-dropDrown a:nth-child(2){
+    background-color: #a73cbd;
+}
+.new-dropDrown a:first-child span,
+.new-dropDrown a:nth-child(2) span,
+.new-dropDrown a:nth-child(3) span{
+    margin-left: 8px;
+}
+
+.new-dropDrown #sketch{
+    color: black;
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0,0.2);
+    display: flex;
+    justify-content: center ;
+    padding: 10px 0px;
+    font-size: 1.8rem;
+}
+
+
+
+
+/* ---------------new DropDown----------------- */
+
+.search-add .search .icon{
+    width: 15%;
+    font-size: 1.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+}
+.search-add .search input{
+    width: 85%;
+    border: none;
+    outline: none;
+    background-color: #404040;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 0px 3px;
+    color: var(--grey);
+    font-size: 17px;
+}
+
+.links{
+    margin-top: 1.2rem;
+}
+
+.links a ,
+.links2 a , 
+.links3 a{
+    font-size: 1.6rem;
+    padding: 0px 20px;
+    color: var(--grey);
+    margin-bottom: 1rem;
+    padding-left: 3.2rem;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#trash{
+    font-size: 1.6rem;
+    padding: 0px 20px;
+    color: var(--grey);
+    margin-top: 3.5rem;
+    padding-left: 3.2rem;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.links a:first-child span ,
+.links a:nth-child(2) span,
+.links a:nth-child(3) span ,
+.links2 a:first-child span ,
+.links3 a span ,
+#trash span{
+    margin-left: 10px;
+}
+
+
+.links a , 
+#trash{
+
+    display: block;
+    font-size: 1.6rem;
+    color: var(--grey);
+    display: flex;
+    align-self: center;
+
+}
+
+.links2{
+    position: relative;
+}
+
+.links2 a i:first-child{
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+    position: absolute;
+    left: 12px;
+}
+
+
+
+
+/* -------------------------------------task---------------------------------------------- */
+
+
+nav #taskContainer{
+    color: white;
+
+}
+
+
+
+
+
+
+
+

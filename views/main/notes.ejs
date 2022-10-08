@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/notes.css">
+    <script src="https://kit.fontawesome.com/8b0dcab210.js" crossorigin="anonymous"></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/notes.js" defer></script>
+    <title>Notes</title>
+</head>
+
+<body>
+    <div class="root" id="root">
+
+        <%- include('../partials/navbar'); %>
+
+            <div class="right">
+                <!-- 
+                <header>
+                    <a href="/all-note/add-note"><i class="fa-solid fa-pencil"></i> Write your Note</a>
+                </header>    -->
+
+
+                <div class="notes-main-container">
+                    <h1>Your Notes</h1>
+
+                    <div class="notes-inner-container">
+                        <% for(let note of user.notes){ %>
+                            <div class="note-box">
+                                <div class="top">
+                                    <i id="threeDot" class="fa-solid fa-ellipsis"></i>
+                                    <!-- ---------dropDown--------->
+
+                                    <div class="dotDropDown">
+                                        <form action="/all-note/notes/<%=note._id%>/edit" method="get">
+                                            <button><i class="fa-solid fa-pencil"></i><span>Edit</span></button>
+                                        </form>
+
+
+                                        <form action="/all-note/notes/<%=note._id %>/delete?_method=DELETE"
+                                            method="post">
+                                            <button> <i class="fa-solid fa-trash"> </i>
+                                                <span>Delete</span></button>
+                                        </form>
+
+
+                                    </div>
+
+                                    <!-- ---------dropDown--------->
+                                </div>
+                                <div class="title">
+                                    <%= note.title %>
+                                </div>
+                                <div class="description">
+                                    <%= note.description %>
+                                </div>
+                                <div class="bottom">
+                                    <i class="fa-solid fa-calendar-days"></i> <span>1 jan 2002</span>
+                                </div>
+                            </div>
+                            <% } %>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+    </div>
+
+</body>
+
+</html>

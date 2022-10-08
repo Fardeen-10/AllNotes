@@ -6,6 +6,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
+const port = process.env.PORT || 5000;
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const session = require('express-session');
@@ -99,6 +100,6 @@ app.use('*', (req, res) => {
 
 
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(port, () => {
     console.log('on port 5000!!!');
 })

@@ -16,6 +16,15 @@ router.route('/add-note')
     .post(isLogin, allNoteController.addNote)
 
 
+
+    router.get('/show/:id', async (req, res) => {
+
+        const user = await User.findOne({ _id: req.session.user_id });
+    res.render('main/show-note', { user })
+
+})
+
+
 router.route('/scratchPad')
     .post(isLogin, allNoteController.scratchPad)
 
